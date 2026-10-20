@@ -73,12 +73,14 @@ VAR TotalTrips = SUM(fact_logistics[completed_trips])
 VAR DelayedTrips = SUM(fact_logistics[delayed_trips])
 RETURN DIVIDE(TotalTrips - DelayedTrips, TotalTrips, 0)
 ```
+```dax
 Ø Verspätung (Min) = 
 AVERAGE(fact_logistics[avg_delay_minutes])
-
+```
+```dax
 Gesamte Fracht (Tonnen) = 
 SUM(fact_logistics[cargo_tons])
-
+```
 
 💻 Tech Stack
 
