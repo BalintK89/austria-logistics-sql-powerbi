@@ -80,12 +80,14 @@ RETURN DIVIDE(TotalTrips - DelayedTrips, TotalTrips, 0)
 // Total Freight Volume
 Gesamte Fracht (Tonnen) = SUM(fact_logistics[cargo_tons])
 
+
+
 💻 Tech Stack
 
-    PostgreSQL (Supabase Cloud) – Relational Data Storage & SQL Views
+PostgreSQL (Supabase Cloud) – Relational Data Storage & SQL Views
 
-    Power BI Desktop – Relational Data Modeling & UI/UX Dashboard
+Power BI Desktop – Relational Data Modeling & UI/UX Dashboard
 
-    DAX – Dynamic Time Intelligence & KPIs
+DAX – Dynamic Time Intelligence & KPIs
 
-    Git & GitHub – Version Control & Portfolio Presentation
+Git & GitHub – Version Control & Portfolio Presentation
