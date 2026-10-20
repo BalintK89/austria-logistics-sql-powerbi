@@ -65,21 +65,19 @@ JOIN dim_route dr ON fl.route_id = dr.route_id;
 ```
 
 
-📊 Core DAX Measures
-Kódrészlet
+## 📊 Core DAX Measures
 
-// Punctuality Rate (%)
+```dax
 Pünktlichkeit % = 
 VAR TotalTrips = SUM(fact_logistics[completed_trips])
 VAR DelayedTrips = SUM(fact_logistics[delayed_trips])
 RETURN DIVIDE(TotalTrips - DelayedTrips, TotalTrips, 0)
+```
+Ø Verspätung (Min) = 
+AVERAGE(fact_logistics[avg_delay_minutes])
 
-// Average Delay in Minutes
-Ø Verspätung (Min) = AVERAGE(fact_logistics[avg_delay_minutes])
-
-// Total Freight Volume
-Gesamte Fracht (Tonnen) = SUM(fact_logistics[cargo_tons])
-
+Gesamte Fracht (Tonnen) = 
+SUM(fact_logistics[cargo_tons])
 
 
 💻 Tech Stack
